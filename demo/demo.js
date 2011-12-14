@@ -20,7 +20,7 @@ function createForm() {
 		    {
 				fieldLabel	:	'Password',
 				name		:	'password',
-				xtype		:	'passwordMeter',
+				xtype		:	'passwordStrength',
 				anchor		:	'100%',
 				minLength	:	3,
 				allowBlank	:	false
