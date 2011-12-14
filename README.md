@@ -5,7 +5,7 @@
  Download the Ext.ux.PasswordStrength.js to your server, include it into the HEAD of your page (After the Ext JS inclusion). No CSS file needed. For more details please have a look at the demo.html
 
 # Screenshot?
- [ Flickr ] (http://blah)
+ [ Flickr ] (http://www.flickr.com/photos/harabagiu_dan/6510269863/)
  
 # Configuration?
 
