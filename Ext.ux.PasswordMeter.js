@@ -34,13 +34,13 @@ var PasswordMeter = Ext.define('Ext.ux.PasswordMeter', {
 	onRender: function(ct, position) {
 		Ext.ux.PasswordMeter.superclass.onRender.call(this, ct, position);
 		
-		var elp = this.el.findParent('div', 1, true);		
-		var inputField = elp.child('div[id^=passwordMeter]',false);
+		this.child = this.el.child('.x-form-item-body');
+		
 		var objectWidth = 0;
-		if(inputField !== null) {
-			objectWidth = inputField.getWidth();
+		if(this.child !== null) {
+			objectWidth = this.child.getWidth();
 			
-			this.scoreText = inputField.createChild({
+			this.scoreText = this.child.createChild({
 				tag		:	'div',
 				'id'	:	'scoreText',
 				'style'	:	{
@@ -52,7 +52,7 @@ var PasswordMeter = Ext.define('Ext.ux.PasswordMeter', {
 			});
 
 			
-			this.objMeter = inputField.createChild({
+			this.objMeter = this.child.createChild({
 				tag		:	"div",
 				'id'	:	'metterContainer',
 				'style'	:	{
@@ -99,9 +99,7 @@ var PasswordMeter = Ext.define('Ext.ux.PasswordMeter', {
 	 * Private function
 	 */
 	resizeMeter: function(obj) {
-		var elp = this.el.findParent('div', 1, true);
-		var inputField = elp.child('div[id^=passwordMeter]',false);
-		var objectWidth = inputField.getWidth();
+		var objectWidth = this.child.getWidth();
 		this.objMeter.setWidth(objectWidth);
 		this.scoreText.setWidth(objectWidth);
 		this.updateMeter(obj);
