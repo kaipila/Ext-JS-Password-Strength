@@ -30,7 +30,7 @@
     	textL4			:	"Excelent",
     }
 
-# Explenations?
+# Explanations?
 
 * _backgroundColor_ : The color of the background of the line that displays the meter
 * _textAlign_ : The CSS alignment of the text of the meter
